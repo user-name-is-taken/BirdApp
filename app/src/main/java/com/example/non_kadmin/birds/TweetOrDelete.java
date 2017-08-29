@@ -48,9 +48,8 @@ import java.util.List;
  * life cycle a bit to get the connection right.
  */
 
-public class TweetOrDelete extends AppCompatActivity implements
-        OnConnectionFailedListener,
-        ConnectionCallbacks{
+public class TweetOrDelete extends AppCompatActivity
+{
     private static final int ID_INTENT = 11;
     private static DriveId driveId;
     //DriveFolder folder;
@@ -65,7 +64,7 @@ public class TweetOrDelete extends AppCompatActivity implements
         setContentView(R.layout.activity_tweet);
         //img = (ImageView) findViewById(R.id.birdPic);
         if(savedInstanceState == null){
-            connectToAPI(getIntent().getExtras().getString(MainActivity.ACCT_NAME));
+//            connectToAPI(getIntent().getExtras().getString(MainActivity.ACCT_NAME));
         }
 
 
@@ -93,19 +92,6 @@ public class TweetOrDelete extends AppCompatActivity implements
      https://www.101apps.co.za/index.php/articles/android-apps-and-google-drive-a-tutorial.html
         this is somewhere else also
      */
-    private void connectToAPI(String acct_name) {
-        TDgac = new GoogleApiClient.Builder(this)
-                .setAccountName(acct_name)
-                .addApi(Drive.API)
-                //.addApi(Drive.API)
-                .addScope(Drive.SCOPE_FILE)
-                .addScope(Drive.SCOPE_FILE)
-                .addScope(Drive.SCOPE_APPFOLDER)
-                .addConnectionCallbacks(this)
-                .addOnConnectionFailedListener(this)
-                .build();
-        TDgac.connect();
-    }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -212,20 +198,5 @@ public class TweetOrDelete extends AppCompatActivity implements
         return appDataFiles;
     }
 
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        new Toast(this).makeText(this, "failed connection",1).show();
-    }
-
-    @Override
-    public void onConnected(@Nullable Bundle bundle) {
-        new Toast(this).makeText(this, "connected",1).show();
-        getBirdsFileID();
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-        new Toast(this).makeText(this, "suspended connection",1).show();
-    }
 }
 //precore
