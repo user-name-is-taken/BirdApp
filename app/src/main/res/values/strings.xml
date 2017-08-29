@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Birds</string>
+    <string name="signed_in_fmt">Signed in fmt</string>
+</resources>

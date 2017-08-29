@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns="http://schemas.android.com/tools">
+
+    <string name="keyID">id=134444261257</string>
+    <string name="appName">com.google.android.apps.drive.no-money-birds</string>
+</resources>
+
+<!--     C:\Program Files\Android\Android Studio\jre\bin>keytool -list -v -keystore "C:\Users\non-kadmin\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+    Alias name: androiddebugkey
+    Creation date: Jun 24, 2017
+    Entry type: PrivateKeyEntry
+    Certificate chain length: 1
+    Certificate[1]:
+    Owner: C=US, O=Android, CN=Android Debug
+    Issuer: C=US, O=Android, CN=Android Debug
+    Serial number: 1
+    Valid from: Sat Jun 24 19:45:35 EDT 2017 until: Mon Jun 17 19:45:35 EDT 2047
+    Certificate fingerprints:
+    MD5:  00:09:09:A3:4D:FA:BF:35:D1:75:79:D7:65:36:3B:B9
+    SHA1: 8C:80:18:B8:9C:27:4F:30:36:1A:CA:99:87:64:EA:06:53:0A:48:2B
+    SHA256: 45:CC:52:F0:8C:39:9F:E4:22:79:49:DC:78:21:8E:8C:5E:F3:D9:B7:02:AD:4B:09:66:73:31:A5:6F:68:B6:5E
+    Signature algorithm name: SHA1withRSA
+    Version: 1
+
+
+    set the jre keytool as an environment variable
+
+    https://developers.google.com/android/guides/client-auth-->
